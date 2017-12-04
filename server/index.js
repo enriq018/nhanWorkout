@@ -7,6 +7,7 @@ const db = require('../database-mysql/index.js');
 
 //MIDDLEWARE 
 // middleware allows extra properties to be added to an incoming request object
+app.use(express.static(__dirname + '/../react-client/dist'));
 // bodyParser adds a "body" property to the request in JSON format
 app.use(bodyParser.json())
 
