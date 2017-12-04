@@ -20,6 +20,7 @@ const getAllWorkouts = (callback) => {
 }
 
 const addWorkout = (obj, callback) => {
+  console.log('-----', obj)
 	var queryString = `INSERT INTO workouts (name, reps, weight,lbs) VALUES('${obj.name}', ${obj.reps}, ${obj.weight}, ${obj.lbs})`;
 	connection.query(queryString, (err, results, fields) => {
 		if(err) {

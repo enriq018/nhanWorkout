@@ -21,6 +21,7 @@ app.get('/workouts', (req,res) => {
 
 //Adds a workout to workouts table
 app.post('/workouts', (req, res) => {
+	console.log(req.body)
   db.addWorkout(req.body, (data) => {
   	res.status(201);  	
   	res.send(data);
